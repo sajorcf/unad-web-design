@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Función: Obtener Usuarios - OVI PHP y Bases de Datos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="../../index.html">
+              <i class="fas fa-home"></i>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="../temas.html" class="current">
+              <i class="fas fa-list-ul"></i>
+              Temas
+            </a>
+          </li>
+          <li>
+            <a href="../descargas.html">
+              <i class="fas fa-download"></i>
+              Descargas
+            </a>
+          </li>
+          <li>
+            <a href="../acercade.html">
+              <i class="fas fa-info-circle"></i>
+              Acerca de
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <header>
+          <h1>Función: Obtener Usuarios</h1>
+          <h2>Temas para el desarrollo del OVI</h2>
+          <div class="image">
+            <i class="fas fa-list-ul"></i>
+          </div>
+        </header>
+        <article>
+          <p>¿Cómo obtenemos los usuarios de nuestra base de datos?, claro, con un "SELECT * FROM unad_users" los tendremos, pero para tener una aplicación sólida hay que aplicar otras lógicas e implementar algunas clases potentes.</p>
+          <p>Ya en la creación de la clase Db usamos PDO (PHP Data Objects), ahora crearemos una función pública "obtenerUsuarios" donde no recibiremos nada, pues no necesitamos recibir nada para poder obtenerlos de la base de datos.</p>
+          <p>Los pasos a seguir para hacer una consulta exitosa son:</p>
+          <ol>
+            <li>Escribir nuestra consulta, seleccionando los datos exactos que queremos recibir (para así evitar extraer datos importantes, por ejemplo, contraseñas)</li>
+            <li>Preparar la consulta (en el caso de variables, para evitar SQL Injection, esta es una buena manera de aplicar variables a la consulta, en este caso no aplicaremos variables).</li>
+            <li>Ejecutamos la consulta</li>
+            <li>Si es exitosa, retornamos la información.</li>
+          </ol>
+          <p>Sabiendo esto, haremos la consulta: <b>SELECT nombre, apellido, correo, telefono, fecha_nacimiento FROM unad_users</b></p>
+          <p><img src="../../assets/images/temas/creando-clase-usuario/funcion-get.png" alt="Clase Usuario, obtener usuarios"/></p>
+          <p>Explicando este código:</p>
+          <ul>
+            <li>Iniciamos una variable $respuesta con un array vacío (Si no logramos obtener nada de la base de datos, retornaremos esa variable vacía).</li>
+            <li>Escribimos en la variable $sql nuestra consulta</li>
+            <li>Preparamos la consulta</li>
+            <li>La ejecutamos dentro de un if para validar si se ejecuta correctamente o hay algún error.</li>
+            <li>La validación de "if ( $query->rowCount() )" es sumamente sencilla:
+              <ul>
+                <li>Si hacemos "if ( 0 )", este no entrará.</li>
+                <li>Si hacemos "if ( 1 )", o cualquier número mayor que 0, este sí entrará.</li>
+                <li>Entonces estamos colocando el número de filas que retornó nuestra consulta, si retornó 0, entonces será un if(0) y nunca entrará, de lo contrario si entrará si es un 1 o un 5 o tal vez un 100.</li>
+              </ul>
+            </li>
+            <li>En el while le colocamos a una variable temporal $row, el fetch que le hagamos a nuestra consulta, es decir, extraemos los datos, éste lo hace por fila, así que el while se encargará de repetir este fetch por cada fila.</li>
+            <li>Luego de que la extraiga la fila le hace un push a nuestro array $respuesta, guardando dicha fila.</li>
+            <li>Al final del while, tendremos el array $respuesta con el total de filas que nuestra consulta obtuvo, entonces lo retornamos.</li>
+          </ul>
+
+          <div class="topics-buttons">
+            <a class="previous" href="creando-clase-usuario.html">&#171; Anterior</a>
+            <a class="next" href="controlador-obtener-usuarios.html">Siguiente &#187;</a>
+          </div>
+        </article>
+        <footer>
+          <p>Derechos Reservados 2018</p>
+          <p>Cristhian Rojas Iglesias</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

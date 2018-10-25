@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Creando la Base de Datos y Tablas - OVI PHP y Bases de Datos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="../../index.html">
+              <i class="fas fa-home"></i>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="../temas.html" class="current">
+              <i class="fas fa-list-ul"></i>
+              Temas
+            </a>
+          </li>
+          <li>
+            <a href="../descargas.html">
+              <i class="fas fa-download"></i>
+              Descargas
+            </a>
+          </li>
+          <li>
+            <a href="../acercade.html">
+              <i class="fas fa-info-circle"></i>
+              Acerca de
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <header>
+          <h1>Creando la Base de Datos y Tablas</h1>
+          <h2>Temas para el desarrollo del OVI</h2>
+          <div class="image">
+            <i class="fas fa-list-ul"></i>
+          </div>
+        </header>
+        <article>
+          <p>HeidiSQL es muy sencillo de utilizar, es por esta razón que fue el gestor escogido para el desarrollo de este OVI.</p>
+          <p>Como estamos en el paso de creación de la Base de Datos, para esto daremos click derecho en el ícono del delfin (Que sería nuestra cuenta de MySQL practicamente) y le daremos a "Create New" > "Database", con esto eligiremos un nombre para nuestra base de datos y la colación. La que está por defecto basta para esta ocasión.</p>
+          <p><img src="../../assets/images/temas/creando-base-de-datos-tablas/creando-base-datos.png" alt="HeidiSQL Creando la Base de Datos"/></p>
+          <p><img src="../../assets/images/temas/creando-base-de-datos-tablas/nombre-bd.png" alt="HeidiSQL Asignándole un Nombre"/></p>
+          <h1>Creando nuestra primera tabla</h1>
+          <p>Una vez creada la base de datos, podremos acceder a ella desde el listado del panel izquierdo de HeidiSQL, dando un click accedemos a ella, luego a mano derecha aparecerían nuestras tablas pero como está recién creada, pues necesitaremos crear una; para ello daremos click derecho > "Create New" > "Table", con esto se nos abrirá una pestaña donde hay requerimientos a llenar para poder crear nuestra primera tabla.</p>
+          <p><img src="../../assets/images/temas/creando-base-de-datos-tablas/new-table.png" alt="HeidiSQL Creando una nueva tabla"/></p>
+          <p>En donde dice "Name" agregaremos pues el nombre de la base de datos, en nuestro caso usaremos "unad_users" para la creación de la tabla de usuarios.</p>
+          <p>Toda tabla debe poseer columnas, por lo cual crearemos las siguientes presionando el botón "Add":</p>
+          <ul>
+            <li><b>NOMBRE:</b> <i>nombre</i>, del tipo VARCHAR con longitud de 50</li>
+            <li><b>APELLIDO:</b> apellido, del tipo VARCHAR con longitud de 50</li>
+            <li><b>CORREO:</b> correo, del tipo VARCHAR con longitud de 100</li>
+            <li><b>TELÉFONO:</b> telefono, del tipo VARCHAR con longitud de 20</li>
+            <li><b>FECHA DE NACIMIENTO:</b> fecha_nacimiento, del tipo DATE</li>
+          </ul>
+          <p>Una vez agregados, presionamos "Save" para guardar nuestros cambios".</p>
+          <p><img src="../../assets/images/temas/creando-base-de-datos-tablas/creando-tabla.png" alt="HeidiSQL Asignando nombre y columnas"/></p>
+          <p>Con estos datos tendremos una pequeña tabla de usuarios con información básica pero importante de cualquier persona.</p>
+          <div class="topics-buttons">
+            <a class="previous" href="primeros-pasos.html">&#171; Anterior</a>
+            <a class="next" href="ramificacion-archivos-carpetas.html">Siguiente &#187;</a>
+          </div>
+        </article>
+        <footer>
+          <p>Derechos Reservados 2018</p>
+          <p>Cristhian Rojas Iglesias</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Controlador: Obtener Usuarios - OVI PHP y Bases de Datos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="../../index.html">
+              <i class="fas fa-home"></i>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="../temas.html" class="current">
+              <i class="fas fa-list-ul"></i>
+              Temas
+            </a>
+          </li>
+          <li>
+            <a href="../descargas.html">
+              <i class="fas fa-download"></i>
+              Descargas
+            </a>
+          </li>
+          <li>
+            <a href="../acercade.html">
+              <i class="fas fa-info-circle"></i>
+              Acerca de
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <header>
+          <h1>Controlador: Obtener Usuarios</h1>
+          <h2>Temas para el desarrollo del OVI</h2>
+          <div class="image">
+            <i class="fas fa-list-ul"></i>
+          </div>
+        </header>
+        <article>
+          <p>Teniendo la lógica de obtener usuarios dentro de nuestro modelo, vamos a crear el controlador, es decir, el que hará la interación entre modelo y vista, y a su vez (si es necesario), agregará más clases, o hará validaciones extra para la vista.</p>
+          <p>¿Qué necesitamos?</p>
+          <ol>
+            <li>Importaremos la clase Db</li>
+            <li>Importaremos la clase User</li>
+            <li>Enviaremos a la clase User el resultado de la clase Db (¿Recuerdan el return $conn de Db y en el constructor del User el $this->conn = $conn?)</li>
+            <li>Llamaremos a la función de User: obtenerUsuarios y asignaremos a una variable el resultado de dicha función.</li>
+            <li>Incluiremos la vista designada para el obtener usuarios.</li>
+          </ol>
+          <p>Es muy fácil, una vez que lo lees dices "Ah obvio, cómo no lo pensé antes" si es que creías que era difícil.</p>
+          <p>En código ésto que acabamos de decir se vería de la siguiente forma:</p>
+          <p><img src="../../assets/images/temas/controlador-obtener-usuarios/php.png" alt="Controlador Obtener Usuarios"/></p>
+          <p>En este punto, si accedemos a "http://localhost/UNAD_Site/controllers/obtener-usuarios.php" dependiendo de su configuración de PHP puede salirles un error o bien, no salir nada. ¿Por qué?:</p>
+          <ul>
+            <li>No hemos creado la vista aún.</li>
+            <li>No tenemos cómo mostrar nuestra variable $listadoUsuarios que es la que tiene toda la información extraída de la base de datos.</li>
+          </ul>
+          <p>¿Solución? Vamos a crear la vista "listado-usuarios.phtml", ¿pero cuál es esa extensión? ¿phtml? Es una extensión usada cuando explícitamente el código tiene PHP y HTML. Podemos usar .php pero la extensión .phtml va más con el estandar.</p>
+
+          <div class="topics-buttons">
+            <a class="previous" href="funcion-obtener-usuarios.html">&#171; Anterior</a>
+            <a class="next" href="vista-obtener-usuarios.html">Siguiente &#187;</a>
+          </div>
+        </article>
+        <footer>
+          <p>Derechos Reservados 2018</p>
+          <p>Cristhian Rojas Iglesias</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

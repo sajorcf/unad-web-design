@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Creando la clase "Usuario" - OVI PHP y Bases de Datos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="../../index.html">
+              <i class="fas fa-home"></i>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="../temas.html" class="current">
+              <i class="fas fa-list-ul"></i>
+              Temas
+            </a>
+          </li>
+          <li>
+            <a href="../descargas.html">
+              <i class="fas fa-download"></i>
+              Descargas
+            </a>
+          </li>
+          <li>
+            <a href="../acercade.html">
+              <i class="fas fa-info-circle"></i>
+              Acerca de
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <header>
+          <h1>Creando la clase "Usuario"</h1>
+          <h2>Temas para el desarrollo del OVI</h2>
+          <div class="image">
+            <i class="fas fa-list-ul"></i>
+          </div>
+        </header>
+        <article>
+          <p>En esta parte ya entramos a la creación de nuestra clase de Usuario, la cual va a contener las funciones:</p>
+          <ul>
+            <li>Obtener Usuarios</li>
+            <li>Crear Usuarios</li>
+            <li>Modificar Usuarios</li>
+            <li>Eliminar Usuarios</li>
+          </ul>
+          <p>En este tema solo nos enfocaremos en la creación de la clase e inicialización de variables primordiales para el pŕoximo uso de la misma.</p>
+          <p>El crear la clase Usuario comienza igual que la clase Db, solo que ahora crearemos las variables privadas que tengamos como columnas en nuestra base de datos, para así poder darles un uso y que el obtener esa variable o escribir en esa variable sea sólo desde la clase. ¿Entonces qué haremos? Si en nuestra base de datos teníamos las columnas: <i>nombre, apellido, correo, telefono, fecha_nacimiento</i> entonces crearemos una variable privada por cada una de estas, y una variable <i>$conn</i> para recibir la conexión a la base de datos que creamos en la clase Db.</p>
+          <p><img src="../../assets/images/temas/creando-clase-usuario/iniciando-clase.png" alt="Iniciando la clase Usuario"/></p>
+          <p>Ahora bien, estarán viendo que en constructor estamos recibiendo un <b>$conn</b> y luego se lo ponemos a nuestra variable <b>private $conn</b>, esto es para recibir la conexión de la Db desde el controlador de Usuario y así poder hacer consultas.
+
+          <p>Ya con esto tendremos lista nuestra clase Usuario, lista para crear nuestras funciones. Sencillo, ¿No?</p>
+
+          <div class="topics-buttons">
+            <a class="previous" href="creando-conexion-bd.html">&#171; Anterior</a>
+            <a class="next" href="funcion-obtener-usuarios.html">Siguiente &#187;</a>
+          </div>
+        </article>
+        <footer>
+          <p>Derechos Reservados 2018</p>
+          <p>Cristhian Rojas Iglesias</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

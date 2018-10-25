@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Creando la conexión a la Base de Datos - OVI PHP y Bases de Datos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="../../index.html">
+              <i class="fas fa-home"></i>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="../temas.html" class="current">
+              <i class="fas fa-list-ul"></i>
+              Temas
+            </a>
+          </li>
+          <li>
+            <a href="../descargas.html">
+              <i class="fas fa-download"></i>
+              Descargas
+            </a>
+          </li>
+          <li>
+            <a href="../acercade.html">
+              <i class="fas fa-info-circle"></i>
+              Acerca de
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <header>
+          <h1>Creando la conexión a la Base de Datos</h1>
+          <h2>Temas para el desarrollo del OVI</h2>
+          <div class="image">
+            <i class="fas fa-list-ul"></i>
+          </div>
+        </header>
+        <article>
+          <p>Estando en este punto, es hora de comenzar a programar, para lo cual accederemos a nuestra carpeta <b>models</b> y crearemos nuestro primer modelo, que será la conexión a la base de datos el cual llamaremos "db.php".</p>
+          <p>Dentro de este crearemos la clase Db, crearemos una función pública "conn" la cual llamaremos cada vez que querramos inicializar la base de datos, y dentro de esta:</p>
+          <ul>
+            <li>Una variable <b>$vars</b> donde incluiremos nuestro archivo "env.php".</li>
+            <li>Un try-catch para evitar errores que rompan el flujo al inicializar la base de datos.</li>
+            <li>Dentro del try-catch inicializaremos la clase PDO de PHP la cual le mandaremos los parámetros: host, db, user y pass.</li>
+          </ul>
+          <p>Si todo sale bien, podremos retornar nuestra conexión con el <b>return $this->conn</b> y nuestra aplicación será capaz de jugar con la base de datos sin problema alguno.</p>
+          <p><img src="../../assets/images/temas/creando-conexion-bd/clase-db.png" alt="PHP Creando la clase DB"/></p>
+          <p>Teniendo este archivo tal cual la imagen, tendremos nuestra conexión a la base de datos hecha, entonces ya podremos llamar a las tablas y ver, insertar, modificar o eliminar datos.</p>
+          
+          <div class="topics-buttons">
+            <a class="previous" href="ramificacion-archivos-carpetas.html">&#171; Anterior</a>
+            <a class="next" href="creando-clase-usuario.html">Siguiente &#187;</a>
+          </div>
+        </article>
+        <footer>
+          <p>Derechos Reservados 2018</p>
+          <p>Cristhian Rojas Iglesias</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

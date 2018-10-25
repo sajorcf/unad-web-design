@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vista: Obtener Usuarios - OVI PHP y Bases de Datos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="../../index.html">
+              <i class="fas fa-home"></i>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="../temas.html" class="current">
+              <i class="fas fa-list-ul"></i>
+              Temas
+            </a>
+          </li>
+          <li>
+            <a href="../descargas.html">
+              <i class="fas fa-download"></i>
+              Descargas
+            </a>
+          </li>
+          <li>
+            <a href="../acercade.html">
+              <i class="fas fa-info-circle"></i>
+              Acerca de
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <header>
+          <h1>Controlador: Obtener Usuarios</h1>
+          <h2>Temas para el desarrollo del OVI</h2>
+          <div class="image">
+            <i class="fas fa-list-ul"></i>
+          </div>
+        </header>
+        <article>
+          <p>Primero que nada, si creamos esta vista y la ejecutamos, no va a mostrar nada, por lo que agregaremos un par de datos a nuestra tabla unad_users, por lo cual, accederemos a HeidiSQL, entramos a nuestra base de datos, vamos a la tabla unad_users y damos clic en la pestaña "Data", luego en el signo +</p>
+          <p><img src="../../assets/images/temas/vista-obtener-usuarios/add-to-bd.png" alt="Agregar datos a nuestra tabla"/></p>
+          <p>¡Perfecto! Hemos agregado 3 filas a nuestra tabla "unad_users", ahora en HTML crearemos una tabla y la llenaremos con esta información que vamos a extraer.</p>
+          <p>En resumen:</p>
+          <ol>
+            <li>Creamos el HTML base con una "table"</li>
+            <li>Dentro del "tbody" vamos a agregar un ciclo PHP que hará repetir a nuestra variable $listadoUsuarios del controlador.</li>
+            <li>Este ciclo va a repetir un "tr" (que es una fila en HTML) y dentro del "tr" agregaremos "td" para agregar una celda, dentro de esta, agregaremos los nombres de columna de nuestra consulta.</li>
+          </ol>
+          <p><img src="../../assets/images/temas/vista-obtener-usuarios/html.png" alt="Creando el HTML"/></p>
+          <p>Ya con esto tendremos terminado nuestro flujo de MVC.</p>
+
+          <div class="topics-buttons">
+            <a class="previous" href="controlador-obtener-usuarios.html">&#171; Anterior</a>
+            <a class="next" href="probando-nuestra-clase.html">Siguiente &#187;</a>
+          </div>
+        </article>
+        <footer>
+          <p>Derechos Reservados 2018</p>
+          <p>Cristhian Rojas Iglesias</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

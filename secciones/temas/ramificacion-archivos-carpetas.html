@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramificación de Archivos y Carpetas - OVI PHP y Bases de Datos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="../../index.html">
+              <i class="fas fa-home"></i>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="../temas.html" class="current">
+              <i class="fas fa-list-ul"></i>
+              Temas
+            </a>
+          </li>
+          <li>
+            <a href="../descargas.html">
+              <i class="fas fa-download"></i>
+              Descargas
+            </a>
+          </li>
+          <li>
+            <a href="../acercade.html">
+              <i class="fas fa-info-circle"></i>
+              Acerca de
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <header>
+          <h1>Ramificación de Archivos y Carpetas</h1>
+          <h2>Temas para el desarrollo del OVI</h2>
+          <div class="image">
+            <i class="fas fa-list-ul"></i>
+          </div>
+        </header>
+        <article>
+          <p>Ya llega la hora de hacer la ramificación de archivos y carpetas, por lo cual usaremos el estilo de arquitectura <b>MVC</b> (Modelo Vista Controlador), puesto que tiene un control y permite al software ser de fácil actualización o modificación en un futuro, separando los datos, la interfaz de usuario y la lógica del mismo.</p>
+          <p>Para ello comenzaremos accediendo a la carpeta <b>htdocs</b> (Windows [Normalmente se encuentra en C:/xampp]) o bien en <b>html</b> (Linux [Normalmente se encuentra en /var/www]) y ahí crearemos nuestra carpeta de proyecto, la cual en este caso llamaremos "UNAD_Site"; a su vez dentro de este crearemos las carpetas:</p>
+          <ul>
+            <li>assets
+              <ul>
+                <li>css</li>
+                <li>fonts</li>
+                <li>images</li>
+                <li>js</li>
+              </ul>
+            </li>
+            <li>config</li>
+            <li>models</li>
+            <li>views</li>
+            <li>controllers</li>
+          </ul>
+          <p><img src="../../assets/images/temas/ramificacion-archivos-carpetas/creando-carpetas.png" alt="MVC Creando las carpetas"/></p>
+          <p>Teniendo creadas las carpetas donde irían nuestros archivos, procederemos a crear nuestro archivo de ambiente que va a poseer nuestros accesos a la base de datos, el cual llamaremos "env.php" en la carpeta <b>config</b>, dentro de este crearemos un array retornado para luego llamar al archivo "env.php" y pasarle nuestra info a alguna variable, por lo cual nuestro contenido sería:</p>
+          <p><img src="../../assets/images/temas/ramificacion-archivos-carpetas/env-file.png" alt="MVC Creando el archivo de ambiente"/></p>
+          <p>Con esto habremos terminado nuestra ramificación y creación de archivo de configuración de ambiente.</p>
+
+          <div class="topics-buttons">
+            <a class="previous" href="creando-base-de-datos-tablas.html">&#171; Anterior</a>
+            <a class="next" href="creando-conexion-bd.html">Siguiente &#187;</a>
+          </div>
+        </article>
+        <footer>
+          <p>Derechos Reservados 2018</p>
+          <p>Cristhian Rojas Iglesias</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
