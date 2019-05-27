@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Listado de Usuarios</title>
+  </head>
+  <body>
+    <h1>Listado de Usuarios</h1>
+    <p>A continuación se presenta un listado de usuarios de la tabla <b>unad_users</b></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Téfono</th>
+          <th>Fecha de Nacimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php foreach($listadoUsuarios as $usuario){ ?>
+        <tr>
+          <td><?php echo $usuario['nombre'].' '.$usuario['apellido'] ?></td>
+          <td><?php echo $usuario['correo'] ?></td>
+          <td><?php echo $usuario['telefono'] ?></td>
+          <td><?php echo $usuario['fecha_nacimiento'] ?></td>
+        </tr>
+      <?php } ?>
+      </tbody>
+    </table>
+    <style> table{ border-collapse: collapse; width: 100%; }
+      td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+      tr:nth-child(even) { background-color: #dddddd; } </style>
+  </body>
+</html>
